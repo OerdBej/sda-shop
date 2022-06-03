@@ -10,5 +10,9 @@ export default function Appbar() {
   // 🤔 conditional for the media queries mobile. If true on mobile || desktop
   const matches = useMediaQuery(theme.breakpoints.down("md"));
 
-  return <>{matches ? <AppbarMobile /> : <AppbarDesktop />}</>;
+  return (
+    <>
+      {matches ? <AppbarMobile matches={matches} /> : <AppbarDesktop matches={matches} />}
+    </>
+  );
 }

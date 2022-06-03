@@ -1,4 +1,6 @@
 import { createTheme } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
+import { Box, color } from "@mui/system";
 
 export const Colors = {
   primary: "#5f2c3e",
@@ -49,3 +51,19 @@ const theme = createTheme({
 });
 
 export default theme;
+
+// here is going to be a box and to createe a functions that is to make the flexGrow: 0 to now grow on desktop
+
+export const ActoniconsContainerDesktop = styled(Box)(() => ({}));
+
+export const ActoniconsContainerMobile = styled(Box)(() => ({
+  display: "flex",
+  background: Colors.shaft,
+  position: "fixed",
+  bottom: 0,
+  left: 0,
+  width: "100%",
+  alignItems: "center",
+  zIndex: 99,
+  borderTop: `1px, solid ${color.border}`,
+}));
