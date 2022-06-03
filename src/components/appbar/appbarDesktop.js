@@ -1,5 +1,7 @@
-import { ListItemText } from "@mui/material";
+import { ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
 import { AppBarContainer, AppbarHeader, MyList } from "../../styles/appbar";
+import SeearchIcon from "@mui/icons-material/Search";
+import Actions from "./actions";
 
 export default function AppbarDesktop({ matches }) {
   return (
@@ -10,7 +12,13 @@ export default function AppbarDesktop({ matches }) {
         <ListItemText primary="Categories" />
         <ListItemText primary="Products" />
         <ListItemText primary="Contact" />
+        <ListItemButton>
+          <ListItemIcon>
+            <SeearchIcon />
+          </ListItemIcon>
+        </ListItemButton>
       </MyList>
+      <Actions />
     </AppBarContainer>
   );
 }
