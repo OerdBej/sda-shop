@@ -1,4 +1,11 @@
+import Pages
+  from "./pages/Pages";
 const App = () => {
-  return <h3>Hello</h3>;
+  return (
+    <div className="App">
+      <h3>Hello</h3>
+      <Pages />
+    </div>
+  );
 };
 export default App;
