@@ -1,10 +1,13 @@
-import Pages
-  from "./pages/Pages";
+
+import Cart from "./common/Cart/Cart"
+
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+
 const App = () => {
   return (
     <div className="App">
-      <h3>Hello</h3>
-      <Pages />
+      <h2>e</h2>
+
     </div>
   );
 };
