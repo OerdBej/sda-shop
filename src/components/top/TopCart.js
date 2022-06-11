@@ -2,29 +2,30 @@ import React from "react"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import Ddata from "./Ddata"
-import "../newarrivals/style.css"
+import Tdata from "./Tdata"
 
-const Dcard = () => {
+const TopCart = () => {
   const settings = {
     dots: false,
     infinite: true,
-    slidesToShow: 6,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
   }
   return (
     <>
       <Slider {...settings}>
-        {Ddata.map((value, index) => {
+        {Tdata.map((value, index) => {
           return (
             <>
               <div className='box product' key={index}>
-                <div className='img'>
-                  <img src={value.cover} alt='' width='100%' />
+                <div className='nametop d_flex'>
+                  <span className='tleft'>{value.para}</span>
+                  <span className='tright'>{value.desc}</span>
                 </div>
-                <h4>{value.name}</h4>
-                <span>{value.price}</span>
+                <div className='img'>
+                  <img src={value.cover} alt='' />
+                </div>
               </div>
             </>
           )
@@ -34,4 +35,4 @@ const Dcard = () => {
   )
 }
 
-export default Dcard
+export default TopCart
